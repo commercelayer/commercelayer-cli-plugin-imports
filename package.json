@@ -74,7 +74,7 @@
     "@commercelayer/js-auth": "^2.3.0",
     "@commercelayer/sdk": "^4.20.0",
     "@fast-csv/parse": "^4.3.6",
-    "@oclif/core": "^1.22.0",
+    "@oclif/core": "^2.0.3",
     "axios": "^1.2.1",
     "cli-progress": "^3.11.2",
     "cli-table3": "^0.6.3",
