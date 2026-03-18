@@ -1,4 +1,4 @@
-import { Command, Flags, Args, type Errors } from '@oclif/core'
+import { Command, Flags, Args, type Interfaces } from '@oclif/core'
 import { clOutput, clUpdate, clColor, clToken, type ApiMode, clUtil } from '@commercelayer/cli-core'
 import commercelayer, { type CommerceLayerClient, CommerceLayerStatic } from '@commercelayer/sdk'
 import * as cliux from '@commercelayer/cli-ux'
@@ -47,7 +47,7 @@ export default abstract class extends Command {
   }
 
 
-  async catch(error: Errors.CLIError): Promise<any> {
+  async catch(error: Interfaces.CommandError): Promise<any> {
     if (error.message?.includes('quit')) this.exit()
     else return super.catch(error)
   }
