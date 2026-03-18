@@ -9,7 +9,6 @@ import { imports, type Import } from '@commercelayer/sdk'
 
 
 
-
 export default class ImportsDetails extends Command {
 
   static description = 'show the details of an existing import'
