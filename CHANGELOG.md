@@ -1,3 +1,10 @@
+# [5.0.0-beta.3](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2026-03-18)
+
+
+### Bug Fixes
+
+* fix tsconfig ([a24012b](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/a24012bf255f1f87fefdfbc43c83bedca966137d))
+
 # [5.0.0-beta.2](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2026-03-18)
 
 
