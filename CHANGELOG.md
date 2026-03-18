@@ -1,3 +1,16 @@
+# [5.0.0-beta.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.2.15...v5.0.0-beta.1) (2026-03-18)
+
+
+### Features
+
+* upgrade oclif core to v4 ([a92243d](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/a92243d2be1ae47447d429a9b232422f4acde483))
+* upgrade oclif core to v4 ([425e48a](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/425e48aed0895404746b975b8ec7046930cac5ae))
+
+
+### BREAKING CHANGES
+
+* upgrade oclif core to v4
+
 ## [4.2.15](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.2.14...v4.2.15) (2026-03-13)
 
 
