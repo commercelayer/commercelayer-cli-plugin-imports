@@ -1,3 +1,10 @@
+# [5.0.0-beta.2](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2026-03-18)
+
+
+### Bug Fixes
+
+* update dependencies ([91d7909](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/91d790974df593127a620f0a4fe3031e1568f900))
+
 # [5.0.0-beta.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.2.15...v5.0.0-beta.1) (2026-03-18)
 
 
