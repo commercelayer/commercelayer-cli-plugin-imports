@@ -9,7 +9,6 @@
     "target": "ES2022",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "composite": true
   },
   "include": [
     "src/**/*"
