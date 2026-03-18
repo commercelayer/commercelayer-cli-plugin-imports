@@ -1,7 +1,7 @@
 import Command, { Args, cliux } from '../../base'
 import Table, { type HorizontalAlignment } from 'cli-table3'
-import type { Import, QueryPageSize, QueryParamsList } from '@commercelayer/sdk'
 import { clColor, clConfig, clOutput } from '@commercelayer/cli-core'
+import { type Import, imports, type QueryPageSize, type QueryParamsList } from '@commercelayer/sdk'
 
 
 
@@ -50,12 +50,12 @@ export default class ImportsGroup extends Command {
 
 
 				// eslint-disable-next-line no-await-in-loop
-				const imports = await cl.imports.list(params)
+				const importList = await imports.list(params)
 
-				if (imports?.length) {
-					tableData.push(...imports)
-					currentPage = imports.meta.currentPage
-					pageCount = imports.meta.pageCount
+				if (importList?.length) {
+					tableData.push(...importList)
+					currentPage = importList.meta.currentPage
+					pageCount = importList.meta.pageCount
 				}
 
 			}
@@ -101,7 +101,7 @@ export default class ImportsGroup extends Command {
 		} catch (error: any) {
       if (cl.isApiError(error) && (error.status === 404))
         this.error(`Unable to find import group${groupId ? ` with id ${clColor.msg.error(groupId)}` : ''}`)
-			else this.handleError(error as Error, flags)
+			else this.handleError(error, flags)
 		}
 
 	}

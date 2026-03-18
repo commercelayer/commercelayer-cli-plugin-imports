@@ -1,6 +1,6 @@
 /* eslint-disable no-await-in-loop */
 import Command, { Flags, cliux } from '../../base'
-import type { CommerceLayerClient, Import } from '@commercelayer/sdk'
+import { application, imports, type CommerceLayerClient, type Import } from '@commercelayer/sdk'
 import { generateInputs } from '../../input'
 import type { SingleBar } from 'cli-progress'
 import { clUtil, clConfig, clColor, type ApiMode, clApi } from '@commercelayer/cli-core'
@@ -216,7 +216,7 @@ export default class ImportsCreate extends Command {
 
 
     } catch (error: any) {
-      this.handleError(error as Error, flags)
+      this.handleError(error, flags)
     }
 
   }
@@ -224,7 +224,7 @@ export default class ImportsCreate extends Command {
 
   private async checkAccessToken(): Promise<void> {
     try {
-      await this.cl.application.retrieve()
+      await application.retrieve()
     } catch (error) {
       if (this.cl.isApiError(error) && error.status && (error.status >= 400)) {
         const err = error.first()
@@ -258,7 +258,7 @@ export default class ImportsCreate extends Command {
 
   private async createImport(chunk: Chunk): Promise<Import> {
     const inputs = (chunk.format === 'json')? chunk.inputs : (chunk.inputs.join('\n') as unknown as Array<Record<string, any>>) // fix inputs resource type issue
-    return this.cl.imports.create({
+    return imports.create({
       format: chunk.format,
       resource_type: chunk.resource_type,
       parent_resource_id: chunk.parent_resource_id,
@@ -292,7 +292,7 @@ export default class ImportsCreate extends Command {
         do {
 
           await clUtil.sleep(importsDelay(chunk.total_batch_chunks - this.completed, this.environment))
-          const tmp = await this.cl.imports.retrieve(imp.id).catch(async error => {
+          const tmp = await imports.retrieve(imp.id).catch(async error => {
             if (this.cl.isApiError(error) && (error.status === 429)) {
               if (imp?.status) barValue = this.monitor.updateBar(bar, barValue, { status: clColor.cyanBright(imp.status) })
               await clUtil.sleep(ERROR_429_DELAY)

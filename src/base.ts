@@ -1,7 +1,6 @@
-import { Command, Flags, Args } from '@oclif/core'
+import { Command, Flags, Args, type Errors } from '@oclif/core'
 import { clOutput, clUpdate, clColor, clToken, type ApiMode, clUtil } from '@commercelayer/cli-core'
 import commercelayer, { type CommerceLayerClient, CommerceLayerStatic } from '@commercelayer/sdk'
-import type { CommandError } from '@oclif/core/lib/interfaces'
 import * as cliux from '@commercelayer/cli-ux'
 
 
@@ -48,13 +47,13 @@ export default abstract class extends Command {
   }
 
 
-  async catch(error: CommandError): Promise<any> {
+  async catch(error: Errors.CLIError): Promise<any> {
     if (error.message?.includes('quit')) this.exit()
     else return super.catch(error)
   }
 
 
-  protected handleError(error: CommandError, flags?: any, id?: string): never {
+  protected handleError(error: unknown, flags?: any, id?: string): never {
     if (CommerceLayerStatic.isApiError(error)) {
       if (error.status === 401) {
         const err = error.first()

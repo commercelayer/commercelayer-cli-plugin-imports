@@ -5,7 +5,7 @@ import axios from 'axios'
 import { gunzipSync } from 'node:zlib'
 import { dirname } from 'node:path'
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
-import type { Import } from '@commercelayer/sdk'
+import { imports, type Import } from '@commercelayer/sdk'
 
 
 
@@ -50,12 +50,12 @@ export default class ImportsDetails extends Command {
 
     const id = args.id
 
-    const cl = this.commercelayerInit(flags)
+    this.commercelayerInit(flags)
 
 
     try {
 
-      const imp = await cl.imports.retrieve(id)
+      const imp = await imports.retrieve(id)
 
       const table = new Table({
         // head: ['ID', 'Topic', 'Circuit state', 'Failures'],
@@ -92,7 +92,7 @@ export default class ImportsDetails extends Command {
       return imp
 
     } catch (error: any) {
-      this.handleError(error as Error, flags, id)
+      this.handleError(error, flags, id)
     }
 
   }

@@ -1,39 +1,40 @@
 import { clColor } from '@commercelayer/cli-core'
 import Command from '../../base'
 import ImportsDetails from './details'
+import { imports } from '@commercelayer/sdk'
 
 
 
 export default class ImportsDelete extends Command {
 
-	static description = 'delete an existing import'
+  static description = 'delete an existing import'
 
-	static aliases = ['imp:delete']
+  static aliases = ['imp:delete']
 
-	static examples = [
-		'$ commercelayer imports:delete <import-id>>',
-		'$ cl imp:delete <import-id>>',
-	]
+  static examples = [
+    '$ commercelayer imports:delete <import-id>>',
+    '$ cl imp:delete <import-id>>',
+  ]
 
 
-	static args = {
-		...ImportsDetails.args,
+  static args = {
+    ...ImportsDetails.args,
   }
 
 
-	async run(): Promise<any> {
+  async run(): Promise<any> {
 
-		const { args, flags } = await this.parse(ImportsDelete)
+    const { args, flags } = await this.parse(ImportsDelete)
 
-		const id = args.id
+    const id = args.id
 
-		const cl = this.commercelayerInit(flags)
+    this.commercelayerInit(flags)
 
 
-		cl.imports.delete(id)
-			.then(() => { this.log(`\n${clColor.msg.success('Successfully')} deleted import with id ${clColor.api.id(id)}\n`) })
-			.catch(error => this.handleError(error as Error, flags, id))
+    imports.delete(id)
+      .then(() => { this.log(`\n${clColor.msg.success('Successfully')} deleted import with id ${clColor.api.id(id)}\n`) })
+      .catch(error => this.handleError(error, flags, id))
 
-	}
+  }
 
 }

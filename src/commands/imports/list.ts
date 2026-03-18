@@ -1,6 +1,6 @@
 import Command, { Flags, cliux } from '../../base'
 import Table, { type HorizontalAlignment } from 'cli-table3'
-import type { Import, QueryPageSize, QueryParamsList } from '@commercelayer/sdk'
+import { imports, type Import, type QueryPageSize, type QueryParamsList } from '@commercelayer/sdk'
 import { clApi, clColor, clConfig, clOutput, clUtil } from '@commercelayer/cli-core'
 
 
@@ -63,7 +63,7 @@ export default class ImportsList extends Command {
 
 		if (flags.limit && (flags.limit < 1)) this.error(clColor.italic('Limit') + ' must be a positive integer')
 
-		const cl = this.commercelayerInit(flags)
+		this.commercelayerInit(flags)
 
 
 		try {
@@ -97,17 +97,17 @@ export default class ImportsList extends Command {
 				}
 
 				// eslint-disable-next-line no-await-in-loop
-				const imports = await cl.imports.list(params)
+				const importList = await imports.list(params)
 
-				if (imports?.length) {
-					tableData.push(...imports)
-					currentPage = imports.meta.currentPage
+				if (importList?.length) {
+					tableData.push(...importList)
+					currentPage = importList.meta.currentPage
 					if (currentPage === 1) {
-						pageCount = this.computeNumPages(flags, imports.meta)
-						totalItems = imports.meta.recordCount
-            delay = clApi.requestRateLimitDelay({ resourceType: cl.imports.type(), totalRequests: pageCount })
+						pageCount = this.computeNumPages(flags, importList.meta)
+						totalItems = importList.meta.recordCount
+            delay = clApi.requestRateLimitDelay({ resourceType: imports.type(), totalRequests: pageCount })
 					}
-					itemCount += imports.length
+					itemCount += importList.length
           if (delay > 0) await clUtil.sleep(delay)
 				}
 
@@ -151,7 +151,7 @@ export default class ImportsList extends Command {
 			return tableData
 
 		} catch (error: any) {
-			this.handleError(error as Error, flags)
+			this.handleError(error, flags)
 		}
 
 	}
