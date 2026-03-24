@@ -73,11 +73,11 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@commercelayer/cli-core": "^5.10.8",
-    "@commercelayer/cli-ux": "^1.1.0",
+    "@commercelayer/cli-core": "oclif4",
+    "@commercelayer/cli-ux": "oclif4",
     "@commercelayer/sdk": "^6.55.0",
     "@fast-csv/parse": "^4.3.6",
-    "@oclif/core": "^3.27.0",
+    "@oclif/core": "^4.10.2",
     "axios": "^1.13.6",
     "cli-progress": "^3.12.0",
     "cli-table3": "^0.6.5",
