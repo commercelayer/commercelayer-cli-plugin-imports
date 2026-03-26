@@ -1,3 +1,15 @@
+# [5.0.0-oclif4.2](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.1...v5.0.0-oclif4.2) (2026-03-26)
+
+
+### Features
+
+* require node to v22 ([cc1599d](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/cc1599d2f20543b270db28cc45dc1107f4c92c8e))
+
+
+### BREAKING CHANGES
+
+* require node to v22
+
 # [5.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.1...v5.0.0-oclif4.1) (2026-03-26)
 
 
