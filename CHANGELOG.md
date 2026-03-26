@@ -1,3 +1,22 @@
+## [4.3.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.0...v4.3.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* update dependencies ([aad00ef](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/aad00ef3f1864809f5a507751d9ba46c16dae403))
+
+# [4.3.0](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.2.15...v4.3.0) (2026-03-24)
+
+
+### Bug Fixes
+
+* fix test script ([71eb836](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/71eb836a0c863e411605f300725b752bbf98e0df))
+
+
+### Features
+
+* add biome ([90f0805](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/90f0805cbc7f38df677dd9f0c6c05be5d9f52f0f))
+
 ## [4.2.15](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.2.14...v4.2.15) (2026-03-13)
 
 
