@@ -1,3 +1,15 @@
+# [5.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.1...v5.0.0-oclif4.1) (2026-03-26)
+
+
+### Features
+
+* upgrade to oclif core v4 and add biome ([c430b37](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/c430b370c9ae5c62f104a4daaa2bfc71a7c58aa0))
+
+
+### BREAKING CHANGES
+
+* upgrade to oclif core v4 and add biome
+
 ## [4.3.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.0...v4.3.1) (2026-03-24)
 
 
