@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.1...v4.4.0) (2026-03-26)
+
+
+### Features
+
+* add import size flag ([4fa5433](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/4fa54337c699c0d959b9093eb2e1c9f293b5a53f))
+
 # [5.0.0-oclif4.2](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.1...v5.0.0-oclif4.2) (2026-03-26)
 
 
