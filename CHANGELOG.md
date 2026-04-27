@@ -1,4 +1,4 @@
-## [4.4.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.4.0...v4.4.1) (2026-04-15)
+# [5.0.0-oclif4.6](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.5...v5.0.0-oclif4.6) (2026-04-27)
 
 
 ### Bug Fixes
@@ -7,12 +7,57 @@
 * run tests in updates workflow ([547ce89](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/547ce89bd7cde7a610c18039b3f701930c537df2))
 * update dependencies and add updates workflow ([59e61f1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/59e61f18956a946d65f245096d111f3e126538f7))
 
+# [5.0.0-oclif4.5](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.4...v5.0.0-oclif4.5) (2026-03-27)
+
+
+### Bug Fixes
+
+* update dependencies ([636fdfc](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/636fdfc84ca193f867ab90935ea5ac456825dc18))
+
+# [5.0.0-oclif4.4](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.3...v5.0.0-oclif4.4) (2026-03-26)
+
+
+### Features
+
+* add import size flag ([4fa5433](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/4fa54337c699c0d959b9093eb2e1c9f293b5a53f))
+
+# [5.0.0-oclif4.3](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.2...v5.0.0-oclif4.3) (2026-03-26)
+
+
+### Bug Fixes
+
+* fix tests ([0b06774](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/0b067744b2d5de5265dad95f8dfa7fe53a14082e))
+
 # [4.4.0](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.1...v4.4.0) (2026-03-26)
 
 
 ### Features
 
 * add import size flag ([4fa5433](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/4fa54337c699c0d959b9093eb2e1c9f293b5a53f))
+
+# [5.0.0-oclif4.2](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v5.0.0-oclif4.1...v5.0.0-oclif4.2) (2026-03-26)
+
+
+### Features
+
+* require node to v22 ([cc1599d](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/cc1599d2f20543b270db28cc45dc1107f4c92c8e))
+
+
+### BREAKING CHANGES
+
+* require node to v22
+
+# [5.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.1...v5.0.0-oclif4.1) (2026-03-26)
+
+
+### Features
+
+* upgrade to oclif core v4 and add biome ([c430b37](https://github.com/commercelayer/commercelayer-cli-plugin-imports/commit/c430b370c9ae5c62f104a4daaa2bfc71a7c58aa0))
+
+
+### BREAKING CHANGES
+
+* upgrade to oclif core v4 and add biome
 
 ## [4.3.1](https://github.com/commercelayer/commercelayer-cli-plugin-imports/compare/v4.3.0...v4.3.1) (2026-03-24)
 

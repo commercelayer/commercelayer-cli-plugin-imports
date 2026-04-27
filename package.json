@@ -1,13 +1,13 @@
 {
   "name": "@commercelayer/cli-plugin-imports",
   "description": "Commerce Layer CLI Imports plugin",
-  "version": "4.4.1",
+  "version": "5.0.0-oclif4.6",
   "author": "Pierluigi Viti <pierluigi@commercelayer.io>",
   "homepage": "https://github.com/commercelayer/commercelayer-cli-plugin-imports",
   "repository": "commercelayer/commercelayer-cli-plugin-imports",
   "bugs": "https://github.com/commercelayer/commercelayer-cli-plugin-imports/issues",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "files": [
     "/bin/run.*",
@@ -50,14 +50,14 @@
     "readme": "cl-cli-dev readme --plugin --bin=commercelayer && git add README.md",
     "lint": "biome check --enforce-assist=true",
     "check": "biome check --enforce-assist=true --write",
-    "release": "pnpm upgrade && pnpm lint && pnpm prepack && pnpm postpack"
+    "release": "pnpm upgrade && pnpm prepack && pnpm postpack && pnpm test"
   },
   "types": "lib/index.d.ts",
   "devDependencies": {
-    "@biomejs/biome": "^2.4.11",
-    "@commercelayer/cli-dev": "^3.1.1",
-    "@oclif/plugin-help": "^6.2.44",
-    "@oclif/test": "^3.2.15",
+    "@biomejs/biome": "^2.4.13",
+    "@commercelayer/cli-dev": "oclif4",
+    "@oclif/plugin-help": "^6.2.45",
+    "@oclif/test": "^4.1.18",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/chai": "^5.2.3",
@@ -70,15 +70,15 @@
     "oclif": "^4.23.0",
     "semantic-release": "^25.0.3",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@commercelayer/cli-core": "^5.11.1",
-    "@commercelayer/cli-ux": "^1.2.1",
-    "@commercelayer/sdk": "^6.56.0",
+    "@commercelayer/cli-core": "oclif4",
+    "@commercelayer/cli-ux": "oclif4",
+    "@commercelayer/sdk": "^6.57.0",
     "@fast-csv/parse": "^4.3.6",
-    "@oclif/core": "^3.27.0",
-    "axios": "^1.15.0",
+    "@oclif/core": "^4.10.6",
+    "axios": "^1.15.2",
     "cli-progress": "^3.12.0",
     "cli-table3": "^0.6.5",
     "open": "^8.4.2",

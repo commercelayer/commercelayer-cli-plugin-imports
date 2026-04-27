@@ -1,12 +1,10 @@
-import { expect, test } from '@oclif/test'
+import { runCommand } from '@oclif/test'
+import { expect } from 'chai'
+
 
 describe('imports:create', () => {
-  test
-    .timeout(5000)
-    .stdout()
-    .command(['imports:noc'])
-    .it('runs NoC', ctx => {
-      expect(ctx.stdout).to.contain('-= NoC =-')
-    })
-
+  it('runs NoC', async () => {
+    const { stdout } = await runCommand<{ name: string }>(['imports:noc'])
+    expect(stdout).to.contain('-= NoC =-')
+  }).timeout(15000)
 })
